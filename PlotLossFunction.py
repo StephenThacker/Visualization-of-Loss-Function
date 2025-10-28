@@ -51,13 +51,13 @@ def GetVectorFrobeniusNorm(random_vector):
     A = []
     for elem in random_vector:
         B = []
-        timmy = np.swapaxes(elem,3,2)
-        timmy = np.swapaxes(timmy,2,1)
-        timmy = np.swapaxes(timmy,0,1)
-        timmy = np.swapaxes(timmy,3,2)
-        timmy = np.swapaxes(timmy,2,1)
-        for i in range(0,len(timmy)):
-            temp = np.linalg.norm(np.ravel(timmy[i]))
+        temp2 = np.swapaxes(elem,3,2)
+        temp2 = np.swapaxes(temp2,2,1)
+        temp2 = np.swapaxes(temp2,0,1)
+        temp2 = np.swapaxes(temp2,3,2)
+        temp2 = np.swapaxes(temp2,2,1)
+        for i in range(0,len(temp2)):
+            temp = np.linalg.norm(np.ravel(temp2[i]))
             B += [temp]
         A += [B]
     return A
